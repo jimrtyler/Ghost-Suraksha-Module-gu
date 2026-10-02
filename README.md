@@ -69,7 +69,9 @@ Ghost **16 Windows હાર્ડનિંગ કાર્યો** વત્ત
 ### સિક્યુરિટી મૂલ્યાંકન
 ```powershell
 # Ghost મોડ્યુલ લોડ કરો
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # વર્તમાન સિક્યુરિટી પોશ્ચર ચેક કરો
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### વિકલ્પ 1: સીધું ડાઉનલોડ (પરીક્ષણ)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### વિકલ્પ 2: મોડ્યુલ ઇન્સ્ટોલેશન
